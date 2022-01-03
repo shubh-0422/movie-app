@@ -1,5 +1,5 @@
 import React from "react"
-import './index.css'
+import './SubHeader.scss'
 
 interface NameProps{
     name:string

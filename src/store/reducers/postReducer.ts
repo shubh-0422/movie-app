@@ -1,6 +1,7 @@
 import { LOAD_SUCCESS} from "../actions/actionTypes";
 import { Actions } from "../types/actionTypes";
 import { MoviesState } from "../types/types";
+import { Api } from './../../api_calls/dataApi'
 
 const InitialState:MoviesState={
     data:[{
@@ -72,6 +73,12 @@ const InitialState:MoviesState={
 export default function(state=InitialState,action:Actions){
     switch(action.type){
           case LOAD_SUCCESS:
+            fetch("https://api.androidhive.info/json/movies_2017.json")
+            .then((res) => res.json())
+            .then((json) => {
+                console.log("hi",json);
+                // return json;
+            })
             return {
               ...state,
               data: action.payload,

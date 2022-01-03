@@ -1,18 +1,17 @@
-import React from 'react';
-import './App.css';
-import Header from './Componetns/Header/index';
-import MovieCard from './Componetns/Card/index';
-import SubHeader from './Componetns/SubHeader/index'
+import './App.scss';
+import Header from './Componetns/Header/Header';
+import MovieCard from './Componetns/MovieCard/MovieCard';
+import SubHeader from './Componetns/SubHeader/SubHeader'
+import Chart from "./Componetns/Chart/Chart";
 
-//import store from './store/store';
-//import { Provider } from 'react';
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="container">
      <Header />
      <SubHeader name="New Movies" />
-     <MovieCard/>
+     <MovieCard/>     
+     <SubHeader name="Chart" />
+     <Chart />
     </div>
   );
 }

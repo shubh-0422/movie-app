@@ -1,18 +1,21 @@
-import React from "react";
-import './card.css'
+
+import './MovieCard.scss';
 import { RootState } from "../../store/reducers";
-import {  useSelector} from "react-redux";
-import {Api} from "./../../api_calls/dataApi"
+import {  AnyIfEmpty, useSelector} from "react-redux";
 interface cardList{
     title:string
     image:string
     price:number | string
 }
 
-const Card =()=>{
-
+const MovieCard: React.FC = () => {
+    // const state[data]=fetch("https://api.androidhive.info/json/movies_2017.json")
+    // .then((res) => res.json())
+    // .then((json) => {
+    //     console.log("hi",json);
+    //     return json;
+    // })
     const state  = useSelector((state: RootState )=> state.postReducer)
-    console.log("mystate",state,Api())
     return(
         <div className='cards'>
             {state.data.map((element:cardList,index:number)=>{                
@@ -31,4 +34,4 @@ const Card =()=>{
 }
 
 
-export default Card
+export default MovieCard;

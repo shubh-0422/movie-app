@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 96px;
+  margin: 0 6px;
+  &:first-child {
+    margin-left: 0px;
+  }
+
+.metrics-container {
+    display: flex;
+    margin-bottom: 24px;
+}
+.vertical-divider {
+    display: flex;
+    width: 1px;
+    background: #ddd;
+    margin: 0 32px 0 18px;
+  }
+    .performance-header-title {
+      font-size: 12px;
+      color: #bbbbbb;
+    }
+    .performance-value-section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      .performance-header-value {
+        font-size: 16px;
+      }
+    }
+  }
+
+  
+  .increase-value,
+.decrease-value {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+.value-change-icon {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  margin: 0px 2px 0px 4px;
+}
+.increase-value {
+  color: #7cb635;
+  .value-change-icon {
+    background-color: #7cb635;
+  }
+}
+.decrease-value {
+  color: #cc0000;
+  .value-change-icon {
+    background-color: #cc0000;
+  }
+}
